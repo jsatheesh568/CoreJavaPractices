@@ -1,6 +1,6 @@
 package src.String;
 
-public class firstAndLastCharacter {
+public class FirstAndLastCharacter {
     public static void main(String[] args){
          String str = "Tata Consultancy Services,Belgium";
          firstAndLastCharacter(str);

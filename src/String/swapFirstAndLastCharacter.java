@@ -1,6 +1,6 @@
 package src.String;
 
-public class SwapFirstAndLastCharacter {
+class swapFirstAndLastCharacter {
 
   public static void main(String[] args) {
     String str = "Tata Consultancy Services, Chennai";

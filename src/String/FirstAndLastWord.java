@@ -1,6 +1,6 @@
 package src.String;
 
-public class firstAndLastWord {
+public class FirstAndLastWord {
     public static void main(String[] args){
         String str = "Tata Consultancy Services, Norway";
         java.util.List < String> words = java.util.Arrays.asList(str.split("\\s+"));
