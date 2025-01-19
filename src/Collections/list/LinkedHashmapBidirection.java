@@ -1,5 +1,8 @@
 package src.Collections.list;
 
+import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
+
 public class LinkedHashmapBidirection {
     public static void main(String[] args){
         java.util.LinkedHashSet < String> set = new java.util.LinkedHashSet <> ();
@@ -22,5 +25,14 @@ public class LinkedHashmapBidirection {
         while (iterator.hasPrevious()) {
             System.out.println(iterator.previous());
         }
+
+        HashMap<Integer,String> hashMap = new HashMap<> ();
+        hashMap.put(1,"satheesh");
+        hashMap.put ( 2,"kumar" );
+         System.out.println(hashMap);
+
+        ConcurrentHashMap < Object, Object > concurrentHashMap = new ConcurrentHashMap<> ();
+        concurrentHashMap.put ( 1,"satheesh" );
+        System.out.println(concurrentHashMap);
     }
 }

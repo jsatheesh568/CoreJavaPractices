@@ -38,7 +38,7 @@ class Employee{
 }
 public class EncapDemo {
     public static void main(String[] args){
-        Employee emp = new src.OOPS.Encapsulation.Employee (  );
+        Employee emp = new Employee (  );
         emp.setName ( "SATHEESH" );
         emp.setDesignation ( "Software Engineer" );
         emp.setName ( "Satheeshkumar" );

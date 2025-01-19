@@ -1,6 +1,9 @@
 package src.ScenarioBasedLearning;
-class NumberArray{
 
+import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
+
+class NumberArray{
     public java.util.List< Integer> findDisappearNumbers ( int[] numberValue ) {
         // First loop: mark the numbers that are present in the array
         for (int i = 0; i < numberValue.length; i++) {
