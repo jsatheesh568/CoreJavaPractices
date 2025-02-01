@@ -11,7 +11,10 @@ public class CapitalCaseString {
         // print the original and modified strings
         System.out.println("Input: " + input);
         System.out.println("Output: " + result);
-    }
+
+    // Input: tata consultancy services chennai
+    // Output: Tata Consultancy Services Chennai
+  }
 
     public static String capitalizeWords(String input) {
         // split the input string into an array of words, stream the array
