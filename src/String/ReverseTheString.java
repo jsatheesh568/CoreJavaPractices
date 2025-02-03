@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class ReverseTheString {
     public static String reverseString(String str) {
         if (str == null || str.isEmpty()) {
-            return str; 
+            return str;
         }
 
         StringBuilder reversed = new StringBuilder();
