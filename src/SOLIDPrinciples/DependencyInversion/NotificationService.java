@@ -1,9 +1,9 @@
 package src.SOLIDPrinciples.DependencyInversion;
 
 public class NotificationService {
-    private MessageSender messageSender;
+    private src.SOLIDPrinciples.DependencyInversion.MessageSender messageSender;
 
-    public NotificationService(MessageSender messageSender) {
+    public NotificationService( src.SOLIDPrinciples.DependencyInversion.MessageSender messageSender) {
         this.messageSender = messageSender;
     }
 

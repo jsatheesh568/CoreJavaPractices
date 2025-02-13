@@ -7,10 +7,10 @@ package src.SOLIDPrinciples.Interfacesegregation;
  */
 public class InterfaceSegregationMain {
   public static void main(String[] args) {
-    Printer simplePrinter = new SimplePrinter();
+    src.SOLIDPrinciples.Interfacesegregation.Printer simplePrinter = (src.SOLIDPrinciples.Interfacesegregation.Printer) new src.SOLIDPrinciples.Interfacesegregation.SimplePrinter ();
     simplePrinter.print();
 
-    MultiFunctionPrinter multiFunctionPrinter = new MultiFunctionPrinter();
+    src.SOLIDPrinciples.Interfacesegregation.MultiFunctionPrinter multiFunctionPrinter = new src.SOLIDPrinciples.Interfacesegregation.MultiFunctionPrinter ();
     multiFunctionPrinter.print();
     multiFunctionPrinter.scan();
   }

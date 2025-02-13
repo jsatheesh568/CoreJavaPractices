@@ -10,12 +10,12 @@ package src.SOLIDPrinciples.DependencyInversion;
 
 public class DependencyInversionMain {
     public static void main(String[] args){
-        MessageSender emailSender = new EmailSender();
-        NotificationService emailNotificationService = new NotificationService(emailSender);
+        src.SOLIDPrinciples.DependencyInversion.MessageSender emailSender = new src.SOLIDPrinciples.DependencyInversion.EmailSender ();
+        src.SOLIDPrinciples.DependencyInversion.NotificationService emailNotificationService = new src.SOLIDPrinciples.DependencyInversion.NotificationService (emailSender);
         emailNotificationService.sendNotification("Hello via Email");
 
-        MessageSender smsSender = new SmsSender();
-        NotificationService smsNotificationService = new NotificationService(smsSender);
+        src.SOLIDPrinciples.DependencyInversion.MessageSender smsSender = new src.SOLIDPrinciples.DependencyInversion.SmsSender ();
+        src.SOLIDPrinciples.DependencyInversion.NotificationService smsNotificationService = new src.SOLIDPrinciples.DependencyInversion.NotificationService (smsSender);
         smsNotificationService.sendNotification("Hello via SMS");
     }
 }
