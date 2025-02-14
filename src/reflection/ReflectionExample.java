@@ -38,8 +38,11 @@ public class ReflectionExample {
 
             // Get constructors
             Constructor<?>[] constructors = obj.getDeclaredConstructors();
+            Class < ? > constructorCount = Employee.class;
+            Constructor<?>[] countConstruct = constructorCount.getConstructors ();
             for (Constructor<?> constructor : constructors) {
                 System.out.println("Constructor: " + constructor.getName());
+                System.out.println("Constructor count: " +countConstruct.length);
             }
 
         } catch (Exception e) {
