@@ -10,7 +10,7 @@ public class HotelService {
     public HotelService() {
         availableRooms = Arrays.asList(
                 new HotelRoom(RoomType.STANDARD, Arrays.asList("WiFi", "Breakfast"), Set.of("TV", "AC"), 100),
-                new HotelRoom(RoomType.DELUXE, Arrays.asList("WiFi", "Breakfast", "Room Service"), Set.of("TV", "AC", "Minibar"), 200),
+                new HotelRoom(RoomType.DELUXE, Arrays.asList("WiFi", "Breakfast", "Room Service",HotelConstants.POOL_SERVICE), Set.of("TV", "AC", "Minibar"), 200),
                 new HotelRoom(RoomType.SUITE, Arrays.asList("WiFi", "Breakfast", "Room Service", HotelConstants.SPA_SERVICE),
                         Set.of("TV", "AC", "Minibar", "Personal Butler"), 500)
         );
