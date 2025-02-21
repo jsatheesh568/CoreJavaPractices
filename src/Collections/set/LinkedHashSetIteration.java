@@ -1,4 +1,4 @@
-package src.Collections.list;
+package CoreJavaPractices.src.Collections.set;
 
 public class LinkedHashSetIteration {
     public static void main(String[] args){
