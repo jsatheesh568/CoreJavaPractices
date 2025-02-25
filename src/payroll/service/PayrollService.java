@@ -1,14 +1,11 @@
 package CoreJavaPractices.src.payroll.service;
 
 import CoreJavaPractices.src.payroll.exception.PayrollException;
+import CoreJavaPractices.src.payroll.model.Employee;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
-import CoreJavaPractices.src.payroll.model.Employee;
 import java.util.stream.Collectors;
 
 public class PayrollService {
@@ -17,27 +14,40 @@ public class PayrollService {
 
   // 📌 Add Employee
   public void addEmployee(Employee employee) {
+    if (employee == null) {
+      logWarning("Cannot add a null employee.");
+      return;
+    }
     employeeMap.put(employee.getId(), employee);
-    System.out.println("Employee added: " + employee);
+    logInfo("Employee added: " + employee);
   }
 
   // 📌 Register Department
   public void registerDepartment(String department) {
-    if (departments.add(department)) {
-      System.out.println("Department registered: " + department);
-    } else {
-      System.out.println("Warning: Department " + department + " already exists");
+    if (department == null || department.isBlank()) {
+      logWarning("Invalid department name.");
+      return;
     }
+    if (departments.add(department)) {
+      logInfo("Department registered: " + department);
+    } else {
+      logWarning("Department " + department + " already exists.");
+    }
+  }
+
+  // 📌 Get Employee By ID (Utility Method)
+  public Optional<Employee> getEmployeeById(String employeeId) {
+    return Optional.ofNullable(employeeMap.get(employeeId));
   }
 
   // 📌 Calculate Bonus using Functional Interface
   public double calculateBonus(String employeeId, double percentage) throws PayrollException {
-    Employee emp = employeeMap.get(employeeId);
-    if (emp == null) {
-      throw new PayrollException("Employee not found: " + employeeId);
-    }
+    Employee emp =
+        getEmployeeById(employeeId)
+            .orElseThrow(() -> new PayrollException("Employee not found: " + employeeId));
+
     double bonus = emp.getSalary() * (percentage / 100);
-    System.out.println("Bonus for " + emp.getName() + ": $" + bonus);
+    logInfo("Bonus for " + emp.getName() + ": $" + bonus);
     return bonus;
   }
 
@@ -48,6 +58,20 @@ public class PayrollService {
 
   // 📌 Print All Employees
   public void printAllEmployees() {
+    if (employeeMap.isEmpty()) {
+      logWarning("No employees found.");
+      return;
+    }
+    logInfo("Employee List:");
     employeeMap.values().forEach(System.out::println);
+  }
+
+  // 📌 Utility Methods for Logging
+  private void logInfo(String message) {
+    System.out.println("[INFO] " + message);
+  }
+
+  private void logWarning(String message) {
+    System.out.println("[WARNING] " + message);
   }
 }
