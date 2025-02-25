@@ -7,8 +7,8 @@ package src.SOLIDPrinciples.OpenClosed;
  */
 public class OpenClosedMain {
     public static void main(String[] args){
-        Employee fullTimeEmployee = new FullTimeEmployee("Alice", 5000);
-        Employee partTimeEmployee = new PartTimeEmployee("Bob", 20, 80);
+        src.SOLIDPrinciples.OpenClosed.Employee fullTimeEmployee = new src.SOLIDPrinciples.OpenClosed.FullTimeEmployee ("Alice", 5000);
+        src.SOLIDPrinciples.OpenClosed.Employee partTimeEmployee = new src.SOLIDPrinciples.OpenClosed.PartTimeEmployee ("Bob", 20, 80);
 
         System.out.println("Full-time Employee Salary: " + fullTimeEmployee.calculateSalary());
         System.out.println("Part-time Employee Salary: " + partTimeEmployee.calculateSalary());
