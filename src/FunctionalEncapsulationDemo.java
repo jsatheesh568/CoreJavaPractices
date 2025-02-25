@@ -1,8 +1,7 @@
 package CoreJavaPractices.src;
-
 @FunctionalInterface
 interface SalaryUpdater {
-    double update(double currentSalary, double increment);
+    void update(Employees emp, double increment);
 }
 
 class Employees {
@@ -18,7 +17,7 @@ class Employees {
         return salary;
     }
 
-    private void setSalary(double salary) {
+    protected void setSalary(double salary) {
         if (salary > 0) {
             this.salary = salary;
         } else {
@@ -27,8 +26,7 @@ class Employees {
     }
 
     public void applySalaryUpdate(SalaryUpdater updater, double increment) {
-        double newSalary = updater.update(this.salary, increment);
-        setSalary(newSalary); // Internal call, still private
+        updater.update(this, increment);
     }
 
     @Override
@@ -42,11 +40,10 @@ public class FunctionalEncapsulationDemo {
         Employees emp = new Employees("Alice", 50000);
 
         // Lambda controlling salary modification
-        SalaryUpdater salaryUpdater = (currentSalary, increment) -> currentSalary + increment;
+        SalaryUpdater salaryUpdater = (e, increment) -> e.setSalary(e.getSalary() + increment);
 
         emp.applySalaryUpdate(salaryUpdater, 5000);
 
-        System.out.println(emp);
+        System.out.println(emp); // Output: Alice earns 55000.0
     }
 }
-
