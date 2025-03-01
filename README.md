@@ -12,22 +12,23 @@ The repository is organized into different folders, each representing a specific
 
 | **Folder Name**            | **Description** |
 |----------------------------|----------------|
-| `Collections`              | Examples and utilities related to Java Collections Framework |
-| `InterviewPreparation`     | Java 8 permutation examples for interview readiness |
-| `Java8`                    | Functional interface examples and other Java 8 features |
-| `LibraryManagementSystem`  | Library Management System implementation using Java 11 |
-| `OOPS`                     | Examples on multiple inheritance and core OOPS concepts |
-| `SOLIDPrinciples`          | Implementation and explanation of SOLID principles in Java |
-| `ScenarioBasedLearning`    | Coding workouts based on real-time scenarios |
+| `Collections`              | Examples and utilities related to Java Collections Framework                               |
+| `InterviewPreparation`     | Java 8 permutation examples for interview readiness                                        |
+| `Java8`                    | Functional interface examples and other Java 8 features                                    |
+| `LibraryManagementSystem`  | Library Management System implementation using Java 11                                     |
+| `InventoryManagementSystem`| Inventory Management System implementation using Java 17                                     |
+| `OOPS`                     | Examples on multiple inheritance and core OOPS concepts                                    |
+| `SOLIDPrinciples`          | Implementation and explanation of SOLID principles in Java                                 |
+| `ScenarioBasedLearning`    | Coding workouts based on real-time scenarios                                               |
 | `String`                   | Utilities for string manipulation, including MoveZerotoRight and repeated character finder |
-| `ecommerce`                | Java 8-based eCommerce application |
-| `generics`                 | Examples demonstrating Java Generics |
-| `hotelBooking`             | Hotel booking application with pool services |
-| `java17`                   | Workouts and feature exploration of Java 17 |
-| `library`                  | Library management app implemented using Java 21 |
-| `payroll`                  | Payroll system refactored following SOLID principles |
-| `reflection`               | Reflection-based utilities such as constructor count |
-| `userRegistration`         | Java 11-based user registration system |
+| `ecommerce`                | Java 8-based eCommerce application                                                         |
+| `generics`                 | Examples demonstrating Java Generics                                                       |
+| `hotelBooking`             | Hotel booking application with pool services                                               |
+| `java17`                   | Workouts and feature exploration of Java 17                                                |
+| `library`                  | Library management app implemented using Java 21                                           |
+| `payroll`                  | Payroll system refactored following SOLID principles                                       |
+| `reflection`               | Reflection-based utilities such as constructor count                                       |
+| `userRegistration`         | Java 11-based user registration system                                                     |
 
 ---
 
