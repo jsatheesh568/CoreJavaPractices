@@ -6,19 +6,19 @@ Changes in the cloned object's reference type fields reflect in the original obj
 Uses super.clone() for copying.
 Faster but may lead to unintended modifications
  */
-class Address {
+class Address1 {
   String city;
 
-  Address(String city) {
+  Address1(String city) {
     this.city = city;
   }
 }
 
 class ShallowCopyExample implements Cloneable {
   String name;
-  Address address;
+  Address1 address;
 
-  ShallowCopyExample(String name, Address address) {
+  ShallowCopyExample(String name, Address1 address) {
     this.name = name;
     this.address = address;
   }
@@ -29,7 +29,7 @@ class ShallowCopyExample implements Cloneable {
   }
 
   public static void main(String[] args) throws CloneNotSupportedException {
-    Address addr = new Address("New York");
+    Address1 addr = new Address1("New York");
     ShallowCopyExample person1 = new ShallowCopyExample("John", addr);
 
     // Creating a shallow copy
